@@ -34,12 +34,14 @@
     </script>
 
     <script type="text/javascript" src="../javascript/completed_initial_service_bar.js"></script>
+    <script type="text/javascript" src="../javascript/completed_initial_service_stacked-bar.js"></script>
     <script type="text/javascript" src="../javascript/average_days_initial_service_line.js"></script>
     <script type="text/javascript" src="../javascript/average_days_bso_line.js"></script>
     <script type="text/javascript" src="../javascript/completed_initial_g10_line.js"></script>
     <script type="text/javascript" src="../javascript/completed_initial_qc_bar.js"></script>
 
     <script type="text/javascript">
+        completed_initial_services();
         try {
             setInterval(function(){run();}, 15000);
         } catch(err) {
@@ -47,6 +49,7 @@
         }
 
         function clear_canvas(canvas_id) {
+            chart.destroy(); // destroy existing chart
             $('#myChart').remove(); // destroy existing canvas
             $('.widget').append('<canvas id="myChart" class=""></canvas>'); // new canvas
         }
@@ -58,17 +61,21 @@
                     break;
                 case 1:
                     clear_canvas();
-                    average_days_initial_services();
+                    completed_initial_services_stack();
                     break;
                 case 2:
                     clear_canvas();
-                    average_days_bso();
+                    average_days_initial_services();
                     break;
                 case 3:
                     clear_canvas();
-                    completed_initial_g10();
+                    average_days_bso();
                     break;
                 case 4:
+                    clear_canvas();
+                    completed_initial_g10();
+                    break;
+                case 5:
                     clear_canvas();
                     completed_initial_qc();
                     slide_index = 0;

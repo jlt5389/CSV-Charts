@@ -18,7 +18,7 @@ function completed_initial_services_stack() {
     }
 
     var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
+    window.chart = new Chart(ctx, {
         type: 'bar',
 
         data: {
@@ -26,89 +26,89 @@ function completed_initial_services_stack() {
             datasets: [{
                 label: csv[47][1], // bar graph - DC
                 backgroundColor: [
-                    'rgb(165, 165, 165)',
-                    'rgb(165, 165, 165)',
-                    'rgb(165, 165, 165)',
-                    'rgb(165, 165, 165)',
-                    'rgb(165, 165, 165)',
-                    'rgb(165, 165, 165)',
+                    'rgba(204,255,255,0.8)',
+                    'rgba(204,255,255,0.8)',
+                    'rgba(204,255,255,0.8)',
+                    'rgba(204,255,255,0.8)',
+                    'rgba(204,255,255,0.8)',
+                    'rgba(204,255,255,0.8)',
                 ],
                 data: csv_data_1,
             },{
                 label: csv[92][1], // bar graph - Delaware
                 backgroundColor: [
-                    '#71a1a0',
-                    '#71a1a0',
-                    '#71a1a0',
-                    '#71a1a0',
-                    '#71a1a0',
-                    '#71a1a0',
+                    'rgba(0,255,255,0.8)',
+                    'rgba(0,255,255,0.8)',
+                    'rgba(0,255,255,0.8)',
+                    'rgba(0,255,255,0.8)',
+                    'rgba(0,255,255,0.8)',
+                    'rgba(0,255,255,0.8)',
                 ],
                 data: csv_data_2,
             },{
                 label: csv[137][1], // bar graph - Maryland
                 backgroundColor: [
-                    '#FF0000',
-                    '#FF0000',
-                    '#FF0000',
-                    '#FF0000',
-                    '#FF0000',
-                    '#FF0000',
+                    'rgba(0,204,204,0.8)',
+                    'rgba(0,204,204,0.8)',
+                    'rgba(0,204,204,0.8)',
+                    'rgba(0,204,204,0.8)',
+                    'rgba(0,204,204,0.8)',
+                    'rgba(0,204,204,0.8)',
                 ],
                 data: csv_data_3,
             },{
                 label: csv[182][1], // bar graph - New Jersey
                 backgroundColor: [
-                    '#F0DC82',
-                    '#F0DC82',
-                    '#F0DC82',
-                    '#F0DC82',
-                    '#F0DC82',
-                    '#F0DC82',
+                    'rgba(0,102,204,0.8)',
+                    'rgba(0,102,204,0.8)',
+                    'rgba(0,102,204,0.8)',
+                    'rgba(0,102,204,0.8)',
+                    'rgba(0,102,204,0.8)',
+                    'rgba(0,102,204,0.8)',
                 ],
                 data: csv_data_4,
             },{
                 label: csv[227][1], // bar graph - Pennsylvania
                 backgroundColor: [
-                    '#0000FF',
-                    '#0000FF',
-                    '#0000FF',
-                    '#0000FF',
-                    '#0000FF',
-                    '#0000FF',
+                    'rgba(0,128,255,0.8)',
+                    'rgba(0,128,255,0.8)',
+                    'rgba(0,128,255,0.8)',
+                    'rgba(0,128,255,0.8)',
+                    'rgba(0,128,255,0.8)',
+                    'rgba(0,128,255,0.8)',
                 ],
                 data: csv_data_5,
             },{
                 label: csv[272][1], // bar graph - Virginia
                 backgroundColor: [
-                    '#FF7F00',
-                    '#FF7F00',
-                    '#FF7F00',
-                    '#FF7F00',
-                    '#FF7F00',
-                    '#FF7F00',
+                    'rgba(102,178,255,0.8)',
+                    'rgba(102,178,255,0.8)',
+                    'rgba(102,178,255,0.8)',
+                    'rgba(102,178,255,0.8)',
+                    'rgba(102,178,255,0.8)',
+                    'rgba(102,178,255,0.8)',
                 ],
                 data: csv_data_6,
             },{
                 label: csv[317][1], // bar graph - West Virginia
                 backgroundColor: [
-                    '#CFB53B',
-                    '#CFB53B',
-                    '#CFB53B',
-                    '#CFB53B',
-                    '#CFB53B',
-                    '#CFB53B',
+                    'rgba(0,0,255,0.8)',
+                    'rgba(0,0,255,0.8)',
+                    'rgba(0,0,255,0.8)',
+                    'rgba(0,0,255,0.8)',
+                    'rgba(0,0,255,0.8)',
+                    'rgba(0,0,255,0.8)',
                 ],
                 data: csv_data_7,
             },{
                 label: csv[362][1], // bar graph - New York
                 backgroundColor: [
-                    'navy',
-                    'navy',
-                    'navy',
-                    'navy',
-                    'navy',
-                    'navy',
+                    'rgba(0,0,153,0.8)',
+                    'rgba(0,0,153,0.8)',
+                    'rgba(0,0,153,0.8)',
+                    'rgba(0,0,153,0.8)',
+                    'rgba(0,0,153,0.8)',
+                    'rgba(0,0,153,0.8)',
                 ],
                 data: csv_data_8,
             }]
@@ -126,7 +126,7 @@ function completed_initial_services_stack() {
             legend: {
                 display: true,
                 labels: {
-                    fontSize: 16
+                    fontSize: 18
                 }
 
             },

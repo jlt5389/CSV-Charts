@@ -9,7 +9,7 @@ function average_days_bso() {
     }
 
     var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
+    window.chart = new Chart(ctx, {
         type: 'line',
 
         data: {
