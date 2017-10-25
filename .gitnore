@@ -23,6 +23,6 @@ Thumbs.db
 *~
 
 # Data files
-*.CSV
+*.csv
 *.xlsx
 *.xls
